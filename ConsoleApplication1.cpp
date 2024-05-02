@@ -45,15 +45,16 @@ double arrayProduct(double arr[], int size)
 void Task2()
 {
     // Створюємо масив з введеним розміром
-    double arr[5];
+    const int size = 5;
+    double arr[size];
     std::cout << "Input array elements:\n";
-    for (int i = 0; i < 5; ++i)
+    for (int i = 0; i < size; ++i)
     {
         std::cin >> arr[i];
     }
 
     // Обчислюємо добуток елементів масиву та виводимо результат
-    double product = arrayProduct(arr, 5);
+    double product = arrayProduct(arr, size);
     std::cout << "Mult of elements = " << (int)product << std::endl;
 }
 
