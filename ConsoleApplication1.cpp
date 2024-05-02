@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// 15.1 | Функція, яка обчислює добуток цифр числа за допомогою рекурсії
+// 15.1 | Знайти добуток цифр введеного числа, використовуючи рекурсію
 int digitProduct(int number)
 {
     // Якщо число однозначне, повертаємо його як добуток
@@ -20,15 +20,11 @@ int digitProduct(int number)
 void Task1()
 {
     int number;
-    while (true)
-    {
-        std::cout << "\nInput number: ";
-        std::cin >> number;
-        if (number > 2147483647) continue;
-        int product = digitProduct(number);
-        if (product > 2147483647) continue;
-        std::cout << "Mult of digits of " << number << " = " << product << std::endl;
-    }
+    std::cout << "Input number: ";
+    std::cin >> number;
+
+    int product = digitProduct(number);
+    std::cout << "Mult of digits of " << number << " = " << product << std::endl;
 }
 
 // 15.2 | Дан масив дійсних чисел A розміру N. Напишіть рекурсивну функцію, яка знаходить добуток елементів масиву.
@@ -64,6 +60,6 @@ void Task2()
 
 int main()
 {
-    Task1();
-    //Task2();
+    //Task1();
+    Task2();
 }
