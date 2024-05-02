@@ -20,11 +20,15 @@ int digitProduct(int number)
 void Task1()
 {
     int number;
-    std::cout << "Input number: ";
-    std::cin >> number;
-
-    int product = digitProduct(number);
-    std::cout << "Mult of digits of " << number << " = " << product << std::endl;
+    while (true)
+    {
+        std::cout << "\nInput number: ";
+        std::cin >> number;
+        if (number > 2147483647) continue;
+        int product = digitProduct(number);
+        if (product > 2147483647) continue;
+        std::cout << "Mult of digits of " << number << " = " << product << std::endl;
+    }
 }
 
 // 15.2 | Дан масив дійсних чисел A розміру N. Напишіть рекурсивну функцію, яка знаходить добуток елементів масиву.
